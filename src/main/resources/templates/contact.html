@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - WikiGroup</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/contact.js"></script>
+</head>
+<body>
+    <div th:replace="fragments/menu :: menu"></div>
+    <main>
+        <h1>Contacto</h1>
+        <form id="contactForm" th:action="@{/contacto}" th:object="${formularioContacto}" method="post">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" th:field="*{nombres}" maxlength="100" required>
+            <span id="nombresError" class="error"></span>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" th:field="*{apellidos}" maxlength="100" required>
+            <span id="apellidosError" class="error"></span>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" th:field="*{correo}" maxlength="100" required>
+            <span id="correoError" class="error"></span>
+
+            <label for="semestre">Semestre:</label>
+            <input type="number" id="semestre" th:field="*{semestre}" min="0" max="16" required>
+            <span id="semestreError" class="error"></span>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" th:field="*{descripcion}" maxlength="500" required></textarea>
+            <span id="descripcionCounter">0/500</span>
+            <span id="descripcionError" class="error"></span>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
