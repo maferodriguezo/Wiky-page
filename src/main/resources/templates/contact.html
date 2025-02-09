@@ -2,38 +2,62 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Contacto - WikiGroup</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/contact.js"></script>
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
+    <!-- Menú dinámico -->
     <div th:replace="fragments/menu :: menu"></div>
-    <main>
-        <h1>Contacto</h1>
-        <form id="contactForm" th:action="@{/contacto}" th:object="${formularioContacto}" method="post">
+
+    <h1>Formulario de Contacto</h1>
+
+    <!-- Formulario de contacto -->
+    <form th:action="@{/contacto}" th:object="${formularioContacto}" method="post">
+        <!-- Campo: Nombres -->
+        <div>
             <label for="nombres">Nombres:</label>
             <input type="text" id="nombres" th:field="*{nombres}" maxlength="100" required>
-            <span id="nombresError" class="error"></span>
+            <small th:if="${#fields.hasErrors('nombres')}" th:errors="*{nombres}">Error en los nombres</small>
+        </div>
 
+        <!-- Campo: Apellidos -->
+        <div>
             <label for="apellidos">Apellidos:</label>
             <input type="text" id="apellidos" th:field="*{apellidos}" maxlength="100" required>
-            <span id="apellidosError" class="error"></span>
+            <small th:if="${#fields.hasErrors('apellidos')}" th:errors="*{apellidos}">Error en los apellidos</small>
+        </div>
 
+        <!-- Campo: Correo -->
+        <div>
             <label for="correo">Correo:</label>
             <input type="email" id="correo" th:field="*{correo}" maxlength="100" required>
-            <span id="correoError" class="error"></span>
+            <small th:if="${#fields.hasErrors('correo')}" th:errors="*{correo}">Error en el correo</small>
+        </div>
 
+        <!-- Campo: Semestre -->
+        <div>
             <label for="semestre">Semestre:</label>
             <input type="number" id="semestre" th:field="*{semestre}" min="0" max="16" required>
-            <span id="semestreError" class="error"></span>
+            <small th:if="${#fields.hasErrors('semestre')}" th:errors="*{semestre}">Error en el semestre</small>
+        </div>
 
+        <!-- Campo: Descripción -->
+        <div>
             <label for="descripcion">Descripción:</label>
             <textarea id="descripcion" th:field="*{descripcion}" maxlength="500" required></textarea>
-            <span id="descripcionCounter">0/500</span>
-            <span id="descripcionError" class="error"></span>
+            <small th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}">Error en la descripción</small>
+        </div>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
+        <!-- Botón de envío -->
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Mensaje de éxito -->
+    <div th:if="${param.exito}">
+        <p style="color: green;">¡Formulario enviado correctamente!</p>
+    </div>
+
+    <!-- Scripts -->
+    <script th:src="@{/js/contact.js}"></script>
 </body>
 </html>
