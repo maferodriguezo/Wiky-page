@@ -3,13 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Equipo - WikiGroup</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
 </head>
 <body>
     <div th:replace="fragments/menu :: menu"></div>
     <main>
         <h1>Nuestro Equipo</h1>
-        <!-- Contenido del equipo -->
+        <div class="team-container">
+            <!-- Miembro 1 -->
+            <div class="team-member">
+                <h2>Juan Daniel Cordoba</h2>
+                <p><strong>Rol:</strong> Desarrollador Frontend</p>
+                <img th:src="@{/fotos/juanD.jpeg}" alt="Foto de Juan D">
+            </div>
+
+            <!-- Miembro 2 -->
+            <div class="team-member">
+                <h2>María Fernanda Rodríguez Ospina</h2>
+                <p><strong>Rol:</strong> Desarrolladora Backend</p>
+                <img src="/images/team2.jpg" alt="María">
+                
+            
+            </div>
+
+            <!-- Miembro 3 -->
+            <div class="team-member">
+                <h2>Johan Sebastian López arciniegas</h2>
+                <p><strong>Rol:</strong> Diseñador UX/UI</p>
+                <img src="/images/team3.jpg" alt="Sebastian">
+                
+                </div>
+
+            <!-- Miembro 4 -->
+            <div class="team-member">
+                <h2>Carlos Manuel Villegas Ruiz</h2>
+                <p><strong>Rol:</strong> Project Manager</p>
+                <img src="/images/team4.jpg" alt="Manuel">
+                
+            </div>
+
+              <!-- Miembro 5 -->
+              <div class="team-member">
+                <h2>Alejandra Abaunza Suárez</h2>
+                <p><strong>Rol:</strong> debops</p>
+                <img src="/images/team4.jpg" alt="Alejandra">
+                
+            </div>
+        </div>
     </main>
 </body>
 </html>
