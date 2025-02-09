@@ -21,16 +21,16 @@ public class WikiController {
         return "index";
     }
 
-    @GetMapping("/contacto")
+    @GetMapping("/contact")
     public String contacto(Model model) {
         model.addAttribute("formularioContacto", new FormularioContacto());
-        return "contacto";
+        return "contact";
     }
 
-    @PostMapping("/contacto")
+    @PostMapping("/contact")
     public String enviarFormulario(FormularioContacto formularioContacto) {
         formularioContactoRepository.save(formularioContacto);
-        return "redirect:/contacto?exito";
+        return "redirect:/contact?exito";
     }
 
     @GetMapping("/team")
