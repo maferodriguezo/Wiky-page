@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Equipo - WikiGroup</title>
     <link th:href="@{/css/styles.css}" rel="stylesheet">
 </head>
+
 <body>
     <div th:replace="fragments/menu :: menu"></div>
     <main>
@@ -22,8 +24,8 @@
                 <h2>María Fernanda Rodríguez Ospina</h2>
                 <p><strong>Rol:</strong> Desarrolladora Backend</p>
                 <img th:src="@{/fotos/Mafe.jpg}" alt="Foto de Mafe R">
-                
-            
+
+
             </div>
 
             <!-- Miembro 3 -->
@@ -31,25 +33,26 @@
                 <h2>Johan Sebastian López arciniegas</h2>
                 <p><strong>Rol:</strong> Diseñador UX/UI</p>
                 <img src="@{/fotos/foto.johan.jpg}" alt="Johan">
-                
-                </div>
+
+            </div>
 
             <!-- Miembro 4 -->
             <div class="team-member">
                 <h2>Carlos Manuel Villegas Ruiz</h2>
                 <p><strong>Rol:</strong> Project Manager</p>
-                <img src="/images/team4.jpg" alt="Manuel">
-                
+                <img th:src="@{/fotos/CarlosV.jpg}" alt="Carlos">
+
             </div>
 
-              <!-- Miembro 5 -->
-              <div class="team-member">
+            <!-- Miembro 5 -->
+            <div class="team-member">
                 <h2>Alejandra Abaunza Suárez</h2>
                 <p><strong>Rol:</strong> debops</p>
                 <img src="/images/ale.jpg" alt="Alejandra">
-                
+
             </div>
         </div>
     </main>
 </body>
+
 </html>
