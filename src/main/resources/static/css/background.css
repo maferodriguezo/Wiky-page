@@ -1,0 +1,28 @@
+/* Fondo animado */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Asegurar que el contenido se vea bien sobre el fondo */
+main {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    font-size: 1.5rem;
+}
+
+/* Estilo del título */
+main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: black;
+}

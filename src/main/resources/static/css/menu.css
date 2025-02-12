@@ -1,0 +1,44 @@
+/* Estilo general de la barra de navegación */
+.navbar {
+    background-color: #003366 !important; /* Azul oscuro */
+    padding: 10px;
+}
+
+/* Ajusta el contenedor del menú */
+.navbar-nav {
+    display: flex;
+    gap: 10px; /* Espaciado entre botones */
+}
+
+/* Estilo de los botones */
+.navbar-nav .nav-link {
+    background-color: #007bff; /* Azul */
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+/* Hover efecto */
+.navbar-nav .nav-link:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Activa la opción seleccionada */
+.navbar-nav .nav-item.active .nav-link {
+    background-color: #004080;
+}
+
+/* Para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar-nav .nav-link {
+        display: block;
+        text-align: center;
+    }
+}
