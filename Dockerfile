@@ -7,7 +7,7 @@ WORKDIR /app
 RUN ./mvnw clean install -DskipTests
 
 
-CMD [ "java", "-jar", "target/wiki-page-0.0.1-SNAPSHOT.JAR"]
+CMD [ "java", "-jar", "target/thymeleaf-wiky-0.0.1-SNAPSHOT.jar"]
 
 
 
