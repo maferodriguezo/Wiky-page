@@ -1,0 +1,75 @@
+/* Reset de márgenes y fuente base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Imágenes */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafos */
+p {
+    text-align: justify;
+    line-height: 1.6;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    img {
+        width: 100%;
+    }
+}
