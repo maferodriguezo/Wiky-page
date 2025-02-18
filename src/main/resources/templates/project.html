@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Proyecto - WikiGroup</title>
     <link th:href="@{/css/menu.css}" rel="stylesheet">
+    <link th:href="@{/css/projectInfo.css}" rel="stylesheet">
 </head>
+
 <body>
     <div th:replace="fragments/menu :: menu"></div>
     <main>
@@ -12,11 +15,38 @@
         <section>
             <h2>Requerimientos</h2>
             <!-- Descripcion de requerimientos en tipo parrafo -->
+            <div class="toggle">
+                <button class="toggle-btn">Requerimiento 1</button>
+                <div class="toggle-content">
+                    <p>Información del requerimiento 1</p>
+                </div>
+            </div>
+            <div class="toggle">
+                <button class="toggle-btn">Requerimiento 2</button>
+                <div class="toggle-content">
+                    <p>Información del requerimiento 2</p>
+                </div>
+            </div>
         </section>
         <section>
             <h2>Funcionalidades</h2>
             <!-- Funcionalidades del proyecto en tipo parrafo -->
+            <div class="toggle">
+                <button class="toggle-btn">Funcionalidad 1</button>
+                <div class="toggle-content">
+                    <p>Información de la funcionalidad 1</p>
+                </div>
+            </div>
+            <div class="toggle">
+                <button class="toggle-btn">Funcionalidad 2</button>
+                <div class="toggle-content">
+                    <p>Información de la funcionalidad 2</p>
+                </div>
+            </div>
         </section>
     </main>
+    <!-- Scripts -->
+    <script th:src="@{/js/projectDescription.js}"></script>
 </body>
+
 </html>
