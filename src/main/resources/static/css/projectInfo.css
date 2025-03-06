@@ -37,3 +37,12 @@
 .toggle-btn.active {
   background: #808080; /* Gris */
 }
+
+.toggle-content img {
+  width: 500px; /* Ancho fijo */
+  height: 300px; /* Altura fija */
+  object-fit: cover; /* Recorta la imagen para llenar el espacio */
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
