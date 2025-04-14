@@ -1,58 +1,53 @@
-/* Estilo general de la barra de navegación */
+/* Fondo con gradiente moderno */
 .navbar.bg-light {
-    background-color: #003366 !important; /* Azul oscuro */
-    padding: 10px;
+    background: rgba(107, 123, 140, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(139, 199, 236, 0.944);
 }
 
-/* Ajusta el contenedor del menú */
-.navbar-nav {
-    display: flex;
-    align-items: center;
-}
-
-/* Espaciado entre elementos */
-.navbar-nav .nav-item {
-    margin-right: 10px; /* Espaciado entre botones */
-}
-
-/* Estilo de los botones */
+/* Botones con estilo neumórfico */
 .navbar-nav .nav-link {
-    background-color: #007bff; /* Azul */
-    color: white !important;
+    background-color: #007bff;
+    color: #fff !important;
     padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
-    min-width: 120px;
-    text-align: center;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
-/* Efecto Hover */
+/* Hover modernito */
 .navbar-nav .nav-link:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-/* Página activa */
+/* Activo con borde */
 .navbar-nav .nav-link.active {
     background-color: #004080 !important;
+    border: 2px solid #fff;
 }
 
-/* Responsive para móviles */
+/* Responsive tweaks mejorados */
 @media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
-    
+
     .navbar-nav .nav-item {
-        width: 100%;
-        text-align: center;
+        margin: 5px 0;
     }
-    
+
     .navbar-nav .nav-link {
-        display: block;
         width: 100%;
-        padding: 12px;
+        border-radius: 0;
     }
 }
+/* Ocultar el botón del menú hamburguesa en pantallas grandes */
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none !important;
+    }
+}
+
