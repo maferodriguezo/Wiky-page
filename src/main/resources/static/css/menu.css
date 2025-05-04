@@ -1,53 +1,69 @@
-/* Fondo con gradiente moderno */
-.navbar.bg-light {
-    background: rgba(107, 123, 140, 0.6) !important;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(139, 199, 236, 0.944);
+/* Paleta general pastel - MODIFICADA PARA MEJOR CONTRASTE */
+:root {
+    --azul-pastel: #5D9CEC;  /* Azul más saturado */
+    --azul-hover: #4A89DC;    /* Azul hover más oscuro */
+    --azul-activo: #3B7DD8;   /* Azul activo más contrastado */
+    --blanco: #ffffff;
+    --fondo-nav: rgba(150, 180, 210, 0.85); /* Nuevo fondo más oscuro */
 }
 
-/* Botones con estilo neumórfico */
+/* Fondo translúcido moderno - ACTUALIZADO */
+.navbar.bg-light {
+    background: var(--fondo-nav) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--azul-pastel);
+    padding: 0.5rem 1rem;
+}
+
+/* Logo / Nombre del sitio (mejorado contraste) */
+.navbar-brand {
+    color: var(--blanco) !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Menú horizontal (sin cambios) */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: auto;
+    list-style: none;
+}
+
+.navbar-nav li {
+    list-style: none;
+}
+
+/* Botones del menú (contraste mejorado) */
 .navbar-nav .nav-link {
-    background-color: #007bff;
-    color: #fff !important;
+    background-color: var(--azul-pastel);
+    color: var(--blanco) !important;
     padding: 10px 20px;
     border-radius: 30px;
     font-weight: 600;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
-/* Hover modernito */
+/* Hover (más contrastado) */
 .navbar-nav .nav-link:hover {
-    background-color: #0056b3;
+    background-color: var(--azul-hover);
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Activo con borde */
+/* Link activo (más destacado) */
 .navbar-nav .nav-link.active {
-    background-color: #004080 !important;
-    border: 2px solid #fff;
+    background-color: var(--azul-activo) !important;
+    border: 2px solid var(--blanco);
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
 }
 
-/* Responsive tweaks mejorados */
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .navbar-nav .nav-item {
-        margin: 5px 0;
-    }
-
-    .navbar-nav .nav-link {
-        width: 100%;
-        border-radius: 0;
-    }
+/* Eliminar hamburguesa (sin cambios) */
+.navbar-toggler {
+    display: none !important;
 }
-/* Ocultar el botón del menú hamburguesa en pantallas grandes */
-@media (min-width: 992px) {
-    .navbar-toggler {
-        display: none !important;
-    }
-}
-
